@@ -11,7 +11,7 @@ public class App {
         String password = "";
 
         Connection con = DriverManager.getConnection(url, user, password);
-        PreparedStatement st = (PreparedStatement) con.createStatement();
+        Statement st =  con.createStatement();
         ResultSet rs = st.executeQuery(sql);
         
         while(rs.next()) {
